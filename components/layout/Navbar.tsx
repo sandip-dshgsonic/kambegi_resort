@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import { Menu, X, Phone, ArrowRight } from "lucide-react";
 
 const navLinks = [
@@ -112,9 +111,13 @@ export default function Navbar() {
           }}
         >
           {/* Logo */}
-          <Link href="/" style={{ textDecoration: "none" }}>
+          <a
+            href="#home"
+            onClick={(e) => { e.preventDefault(); navTo("#home"); }}
+            style={{ textDecoration: "none", cursor: "pointer" }}
+          >
             <Logo />
-          </Link>
+          </a>
 
           {/* Desktop nav links — auto column keeps links at true center */}
           <nav

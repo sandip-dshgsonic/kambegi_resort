@@ -32,7 +32,7 @@ const amenities = [
     name: "Forest Trekking",
     desc: "Guided walks through ancient forests revealing hidden waterfalls and rare wildlife.",
     timings: "5:30 AM – 11 AM",
-    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=85",
+    image: "Images/waterfallview.jpg",
   },
   {
     icon: Droplets, category: "Wellness",   accent: "#60a5fa",
