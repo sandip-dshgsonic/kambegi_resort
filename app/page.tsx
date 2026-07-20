@@ -5,6 +5,7 @@ import AboutSection from "@/sections/AboutSection";
 import LocationSection from "@/sections/LocationSection";
 import MasterplanSection from "@/sections/MasterplanSection";
 import AccommodationSection from "@/sections/AccommodationSection";
+import OccasionsSection from "@/sections/OccasionsSection";
 import AmenitiesSection from "@/sections/AmenitiesSection";
 import GallerySection from "@/sections/GallerySection";
 import ContactSection from "@/sections/ContactSection";
@@ -22,6 +23,7 @@ export default function Home() {
         <AboutSection />
         <MasterplanSection />
         <AccommodationSection />
+        <OccasionsSection />
         <AmenitiesSection />
         <GallerySection />
         <LocationSection />

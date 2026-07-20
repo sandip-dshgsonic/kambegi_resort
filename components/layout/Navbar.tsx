@@ -7,10 +7,11 @@ import { Menu, X, Phone, ArrowRight } from "lucide-react";
 const navLinks = [
   { num: "01", label: "About",       href: "#about" },
   { num: "02", label: "Stays",       href: "#accommodation" },
-  { num: "03", label: "Experiences", href: "#amenities" },
-  { num: "04", label: "Gallery",     href: "#gallery" },
-  { num: "05", label: "Location",    href: "#location" },
-  { num: "06", label: "Contact",     href: "#contact" },
+  { num: "03", label: "Occasions",   href: "#occasions" },
+  { num: "04", label: "Experiences", href: "#amenities" },
+  { num: "05", label: "Gallery",     href: "#gallery" },
+  { num: "06", label: "Location",    href: "#location" },
+  { num: "07", label: "Contact",     href: "#contact" },
 ];
 
 function Logo({ small = false }: { small?: boolean }) {
