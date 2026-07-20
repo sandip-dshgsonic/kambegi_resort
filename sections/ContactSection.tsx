@@ -34,13 +34,17 @@ function InputField({
   as?: "textarea" | "select"; rows?: number; children?: React.ReactNode;
   focused?: boolean; onFocus?: () => void; onBlur?: () => void;
 }) {
+  const isDate = type === "date";
+
   const base: React.CSSProperties = {
     width: "100%", boxSizing: "border-box",
-    padding: Icon ? "0.9rem 1rem 0.9rem 2.8rem" : "0.9rem 1rem",
+    padding: Icon
+      ? isDate ? "0.9rem 0.5rem 0.9rem 2.6rem" : "0.9rem 1rem 0.9rem 2.8rem"
+      : "0.9rem 1rem",
     background: "rgba(255,255,255,.05)",
     border: focused ? "1px solid rgba(201,168,76,.6)" : "1px solid rgba(250,247,242,.12)",
     borderRadius: 6, color: "#faf7f2", outline: "none",
-    fontFamily: "var(--font-inter)", fontSize: "0.88rem",
+    fontFamily: "var(--font-inter)", fontSize: isDate ? "0.78rem" : "0.88rem",
     transition: "border-color .2s, background .2s",
     boxShadow: focused ? "0 0 0 3px rgba(201,168,76,.08)" : "none",
   };
@@ -114,7 +118,7 @@ export default function ContactSection() {
         {/* ── Left — Hero image panel ── */}
         <div style={{ position: "relative", overflow: "hidden", minHeight: 500 }}>
           <Image
-            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=85"
+            src="/Images/riverview.jpg"
             alt="Kambegi Resort — Reserve Your Stay"
             fill className="object-cover"
             sizes="(max-width:768px)100vw,50vw"

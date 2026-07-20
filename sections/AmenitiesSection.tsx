@@ -25,7 +25,7 @@ const amenities = [
     name: "Lake Water Sports",
     desc: "Kayaking, paddle boarding, and sunrise boat rides on pristine Panshet Lake.",
     timings: "6 AM – 6 PM",
-    image: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&q=85",
+    image: "/Images/lakeview.jpg",
   },
   {
     icon: Mountain, category: "Activities", accent: "#4ade80",

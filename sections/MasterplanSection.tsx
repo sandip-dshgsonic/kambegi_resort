@@ -9,7 +9,8 @@ const masterplanItems = [
     number: "01",
     title: "The Forest Estate",
     description: "At the heart of Kambegi lies the untouched forest — 40 acres of ancient trees, wildlife corridors, and natural springs that feed the estate.",
-    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
+    // image: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
+    image: "/Images/waterfallview.jpg",
     detail: "Forest trails, bird watching towers, meditation circles.",
   },
   {
@@ -23,7 +24,7 @@ const masterplanItems = [
     number: "03",
     title: "The Lake Experience",
     description: "Panshet Lake forms the scenic backdrop for water activities, lakeside dining, and sunrise yoga sessions on floating platforms.",
-    image: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=800&q=80",
+    image: "/Images/lakeview.jpg",
     detail: "Kayaking, paddle boarding, boat rides, jetty dining.",
   },
   {

@@ -90,6 +90,24 @@
     font-family: inherit;
   }
 
+  /* Native date inputs: force dark UA styling and let the whole field
+     open the picker, since the default icon collides with dd-mm-yyyy
+     text in narrow columns. */
+  input[type="date"] {
+    color-scheme: dark;
+    position: relative;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
   /* =====================================================
      SCROLLBAR
      ===================================================== */

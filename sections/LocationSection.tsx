@@ -9,7 +9,7 @@ const journeyStops = [
   { icon: Car,    label: "From Pune City",       distance: "60 km",  time: "~90 min",  via: "Via Sinhagad Road" },
   { icon: Car,    label: "From Mumbai",           distance: "180 km", time: "~3.5 hrs", via: "Via Pune Expressway" },
   { icon: Train,  label: "Pune Railway Station",  distance: "55 km",  time: "~85 min",  via: "Cab available on request" },
-  { icon: MapPin, label: "Panshet Dam",           distance: "2 km",   time: "~5 min",   via: "Scenic lakeside route" },
+  { icon: MapPin, label: "Panshet Dam",           distance: "11 km",   time: "~30 min",   via: "Scenic lakeside route" },
 ];
 
 export default function LocationSection() {

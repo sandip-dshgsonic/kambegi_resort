@@ -41,7 +41,7 @@ export default function HeroSection() {
         style={{ position: "absolute", inset: 0, zIndex: 0 }}
       >
         <Image
-          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=90"
+          src="/Images/natureview2.jpg"
           alt="Kambegi Resort — Western Ghats"
           fill priority quality={90}
           className="object-cover object-center"

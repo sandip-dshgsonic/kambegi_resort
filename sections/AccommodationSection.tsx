@@ -13,7 +13,7 @@ const rooms = [
     badges: ["Private Pool", "Forest View", "Butler Service"],
     accent: "#34d399",
     images: [
-      "https://images.unsplash.com/photo-1439130490301-25e322d88054?w=900&q=80",
+      "/Images/farmview.jpg",
       "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=900&q=80",
     ],
   },
@@ -47,7 +47,7 @@ const rooms = [
     badges: ["Fire Pit", "Stargazing", "Nature Sounds"],
     images: [
       "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=900&q=80",
-      "https://images.unsplash.com/photo-1533619239233-6280475a633a?w=900&q=80",
+      "/Images/lakeview.jpg",
     ],
   },
 ];

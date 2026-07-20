@@ -6,12 +6,12 @@ import Image from "next/image";
 import { X, ZoomIn, ChevronLeft, ChevronRight, Camera } from "lucide-react";
 
 const galleryImages = [
-  { id: 1, src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=85", alt: "Mountain Vista", category: "nature" },
-  { id: 2, src: "https://images.unsplash.com/photo-1439130490301-25e322d88054?w=800&q=85", alt: "Forest Villa", category: "accommodation" },
+  { id: 1, src: "/Images/riverview.jpg", alt: "Panshet", category: "nature" },
+  { id: 2, src: "/Images/mountainview.jpg", alt: "Forest Villa", category: "accommodation" },
   { id: 3, src: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=85", alt: "Glamping Tent", category: "accommodation" },
-  { id: 4, src: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=800&q=85", alt: "Panshet Lake", category: "nature" },
+  { id: 4, src: "/Images/lakeview2.jpg", alt: "Panshet Lake", category: "nature" },
   { id: 5, src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=85", alt: "Fine Dining", category: "dining" },
-  { id: 6, src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1000&q=85", alt: "Infinity Pool", category: "amenities" },
+  { id: 6, src: "/Images/morningview.jpg", alt: "Infinity Pool", category: "amenities" },
   { id: 7, src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=85", alt: "Spa Treatment", category: "amenities" },
   { id: 8, src: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=85", alt: "Forest Walk", category: "nature" },
   { id: 9, src: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=85", alt: "Yoga at Dawn", category: "activities" },
