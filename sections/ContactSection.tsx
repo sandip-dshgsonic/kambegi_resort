@@ -11,10 +11,9 @@ import { inquiriesAPI } from "@/lib/api";
 import toast from "react-hot-toast";
 
 const roomOptions = [
-  { value: "Forest Villa",         label: "Forest Villa — ₹25,000 / night" },
-  { value: "Panshet Lake Suite",   label: "Panshet Lake Suite — ₹18,000 / night" },
-  { value: "Treehouse Cottage",    label: "Treehouse Cottage — ₹15,000 / night" },
-  { value: "Luxury Glamping Tent", label: "Luxury Glamping Tent — ₹12,000 / night" },
+  { value: "Heritage Villa",       label: "Heritage Villa — 5 Bedroom" },
+  { value: "Horizon Villa",        label: "Horizon Villa — 3 Bedroom" },
+  { value: "Private Pool Cabin",   label: "Private Pool Cabin — Couple's Retreat" },
 ];
 
 const policies = [

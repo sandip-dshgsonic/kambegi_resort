@@ -18,7 +18,7 @@ const masterplanItems = [
     title: "The Living Quarters",
     description: "Our accommodations are designed as islands of calm — each villa and suite positioned to maximize privacy and natural views.",
     image: "https://images.unsplash.com/photo-1518733057094-95b53143d2a7?w=800&q=80",
-    detail: "4 villa types, each with private outdoor spaces.",
+    detail: "2 villa types plus private couple's cabins, each with private outdoor spaces.",
   },
   {
     number: "03",

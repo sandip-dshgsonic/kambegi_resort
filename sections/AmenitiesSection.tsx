@@ -3,14 +3,21 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { Utensils, Sparkles, Waves, Mountain, Droplets, Leaf, Clock, ArrowUpRight } from "lucide-react";
+import { Utensils, Sparkles, Waves, Mountain, Droplets, Flower2, Footprints, Caravan, MoonStar, Clock, ArrowUpRight } from "lucide-react";
 
 const amenities = [
   {
+    icon: MoonStar, category: "Signature",  accent: "#c9a84c",
+    name: "Dinner Under the Stars",
+    desc: "An open-air amphitheatre set for candlelit dinners beneath the night sky — envisioned as Kambegi's signature evening experience.",
+    timings: "Evenings Only",
+    image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=1200&q=85",
+  },
+  {
     icon: Utensils, category: "Dining",     accent: "#c9a84c",
-    name: "The Grove Restaurant",
-    desc: "Farm-to-table dining celebrating the flavors of the Western Ghats with seasonal menus.",
-    timings: "7 AM – 11 PM",
+    name: "The Lakeview Dining Room",
+    desc: "Our signature restaurant and café overlook Panshet Lake and the surrounding peaks, flowing straight out to the infinity pool deck — a memorable, panoramic dining experience from sunrise to starlight.",
+    timings: "All-Day Dining",
     image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=85",
   },
   {
@@ -35,25 +42,39 @@ const amenities = [
     image: "/Images/waterfallview.jpg",
   },
   {
+    icon: Footprints, category: "Activities", accent: "#4ade80",
+    name: "Horse-Riding Trails",
+    desc: "Guided rides along scenic trails skirting the resort — a rare experience among nearby properties.",
+    timings: "By Appointment",
+    image: "/Images/horse-riding.png",
+  },
+  {
     icon: Droplets, category: "Wellness",   accent: "#60a5fa",
     name: "Infinity Pool",
-    desc: "Our stunning infinity pool merges seamlessly with the forest horizon.",
+    desc: "Continuing on from the restaurant and café area, our stunning infinity pool merges seamlessly with the forest horizon.",
     timings: "6 AM – 9 PM",
     image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=85",
   },
   {
-    icon: Leaf,     category: "Wellness",   accent: "#60a5fa",
-    name: "Yoga Pavilion",
-    desc: "Open-air yoga with certified instructors — morning flows and breathwork in the forest.",
-    timings: "6–8 AM & 5–7 PM",
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1400&q=85",
+    icon: Caravan, category: "Facilities",  accent: "#f59e0b",
+    name: "Caravan Parking",
+    desc: "Dedicated parking for caravans and road-trip travellers — an amenity rarely available at nearby resorts.",
+    timings: "24-Hour Access",
+    image: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?w=900&q=85",
+  },
+  {
+    icon: Flower2, category: "Wellness",    accent: "#60a5fa",
+    name: "Wellness & Activity Studio",
+    desc: "A flexible indoor-outdoor studio for yoga, meditation, dance, fitness, and art workshops — for leisure guests and retreat groups alike.",
+    timings: "Coming Soon",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1400&q=85",
   },
 ];
 
 // Grid positions: [col-start/col-end] for 3-col grid
-const gridCols = ["1 / 3", "3 / 4", "1 / 2", "2 / 3", "3 / 4", "1 / 4"];
+const gridCols = ["1 / 3", "3 / 4", "1 / 2", "2 / 3", "3 / 4", "1 / 2", "2 / 3", "3 / 4", "1 / 4"];
 // Which cards show content in base state (not only hover)
-const alwaysShow = [true, false, false, false, false, true];
+const alwaysShow = [true, true, false, false, false, false, false, false, true];
 
 const extraTags = ["Bonfire Nights", "Bird Watching", "Cycling Trails", "Cooking Classes", "Astro Nights", "Campfire Stories", "Organic Farming"];
 
@@ -125,7 +146,7 @@ export default function AmenitiesSection() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
-            gridTemplateRows: "320px 280px 240px",
+            gridTemplateRows: "320px 280px 280px 240px",
             gap: "0.7rem",
           }}
         >
@@ -204,7 +225,7 @@ export default function AmenitiesSection() {
 
                 <h4 style={{
                   fontFamily: "var(--font-playfair), Georgia, serif",
-                  fontSize: i === 0 ? "1.6rem" : i === 5 ? "1.4rem" : "1.15rem",
+                  fontSize: i === 0 ? "1.6rem" : i === 8 ? "1.4rem" : "1.15rem",
                   fontWeight: 400, color: "#faf7f2", lineHeight: 1.2,
                   marginBottom: "0.5rem",
                 }}>{a.name}</h4>

@@ -7,47 +7,36 @@ import { Star, Users, BedDouble, ArrowRight, ChevronLeft, ChevronRight, Maximize
 
 const rooms = [
   {
-    id: 1, name: "Forest Villa", type: "Villa", price: "₹25,000",
-    desc: "A luxurious forest villa nestled among ancient trees, featuring a private plunge pool and seamless indoor-outdoor living. Every morning begins with birdsong and ends beneath a canopy of stars.",
-    guests: 4, bedrooms: 2, size: "320 sq.m", rating: 5,
-    badges: ["Private Pool", "Forest View", "Butler Service"],
-    accent: "#34d399",
+    id: 1, name: "Heritage Villa", type: "5-Bedroom Villa", price: "On Request",
+    desc: "Inspired by traditional architecture, this 2,600 sq. ft. villa wraps warm wooden interiors around a double-height dining space crowned by a skylight that fills the home with natural light. Unwind on the handcrafted wooden swing framing a sweeping 180° panoramic view, or slip into the temperature-controlled private plunge pool tucked within one of the five bedrooms.",
+    guests: 10, bedrooms: 5, size: "2,600 sq.ft", rating: 5,
+    badges: ["Skylight Dining Hall", "Wooden Swing · 180° View", "Private Plunge Pool"],
+    accent: "#c9a84c",
     images: [
-      "/Images/farmview.jpg",
       "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=900&q=80",
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&q=80",
     ],
   },
   {
-    id: 2, name: "Panshet Lake Suite", type: "Suite", price: "₹18,000",
-    desc: "Wake up to breathtaking views of Panshet Lake. An infinity bathtub overlooking the water, a private sunset terrace, and floor-to-ceiling glass that dissolves the line between inside and out.",
-    guests: 2, bedrooms: 1, size: "180 sq.m", rating: 5,
+    id: 2, name: "Horizon Villa", type: "3-Bedroom Villa", price: "On Request",
+    desc: "A study in contemporary elegance, this 1,800 sq. ft. villa is built around a soaring 24-foot double-height living room that opens to panoramic lake views and spectacular sunrise colours each morning. A pool table, generous seating area, and a separate TV/lounge room make it the ideal base for families and groups to gather.",
+    guests: 6, bedrooms: 3, size: "1,800 sq.ft", rating: 5,
     accent: "#60a5fa",
-    badges: ["Lake View", "Infinity Tub", "Terrace"],
+    badges: ["24-ft Double-Height Living Room", "Lake Sunrise Views", "Pool Table & Lounge"],
     images: [
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=900&q=80",
-    ],
-  },
-  {
-    id: 3, name: "Treehouse Cottage", type: "Cottage", price: "₹15,000",
-    desc: "Experience the magic of sleeping among the treetops. Panoramic jungle canopy views with all modern luxuries — hammock decks, open-air showers, and the whisper of the forest all around you.",
-    guests: 2, bedrooms: 1, size: "120 sq.m", rating: 5,
-    accent: "#a78bfa",
-    badges: ["Treetop Views", "Hammock", "Open-air Shower"],
-    images: [
-      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&q=80",
-      "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&q=80",
-    ],
-  },
-  {
-    id: 4, name: "Luxury Glamping Tent", type: "Glamping", price: "₹12,000",
-    desc: "Plush king beds, a private fire pit, and stargazing deck — camping adventure meets world-class luxury. Fall asleep to nature sounds and wake to golden morning light filtering through canvas walls.",
-    guests: 2, bedrooms: 1, size: "80 sq.m", rating: 4,
-    accent: "#f59e0b",
-    badges: ["Fire Pit", "Stargazing", "Nature Sounds"],
-    images: [
-      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=900&q=80",
       "/Images/lakeview.jpg",
+      "/Images/lakeview2.jpg",
+    ],
+  },
+  {
+    id: 3, name: "Private Pool Cabin", type: "Couple's Retreat", price: "On Request",
+    desc: "An exclusive romantic escape for two — our luxury private cabins each come with their own private plunge pool, designed as an intimate retreat away from it all.",
+    guests: 2, bedrooms: 1, size: "Private Suite", rating: 5,
+    accent: "#f472b6",
+    badges: ["Private Plunge Pool", "Couples Only", "Total Privacy"],
+    images: [
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80",
+      "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&q=80",
     ],
   },
 ];
@@ -147,7 +136,7 @@ function RoomCard({ room, index }: { room: typeof rooms[0]; index: number }) {
             <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.3rem,2vw,1.75rem)", fontWeight: 400, color: "#1a3a2a" }}>
               {room.price}
             </p>
-            <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.68rem", color: "rgba(107,74,42,.5)", letterSpacing: "0.1em", textTransform: "uppercase", marginTop: 2 }}>per night</p>
+            <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.68rem", color: "rgba(107,74,42,.5)", letterSpacing: "0.1em", textTransform: "uppercase", marginTop: 2 }}>Contact for Rates</p>
           </div>
         </div>
 
@@ -227,7 +216,7 @@ export default function AccommodationSection() {
             className="mt-6 mx-auto"
             style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "rgba(107,74,42,.68)", lineHeight: 1.8, maxWidth: 560 }}
           >
-            From treetop cottages to lakeside suites — each accommodation is a unique encounter with luxury and nature.
+            From the wood-panelled warmth of our Heritage Villa to the sleek, lake-facing Horizon Villa and our private couple&apos;s pool cabins — each stay is a distinct encounter with luxury and nature.
           </p>
         </motion.div>
 

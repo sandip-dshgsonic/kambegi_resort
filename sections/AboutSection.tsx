@@ -13,9 +13,9 @@ const pillars = [
 ];
 
 const counters = [
-  { num: "4",    text: "Unique Stays" },
+  { num: "3",    text: "Unique Stays" },
   { num: "12+",  text: "Curated Experiences" },
-  { num: "3",    text: "Dining Venues" },
+  { num: "2",    text: "Dining Venues" },
   { num: "100%", text: "Organic Sourced" },
 ];
 
@@ -163,7 +163,7 @@ export default function AboutSection() {
               vision: to create a place where luxury does not come at nature's expense, but because of it.
             </p>
             <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.95rem", color: "rgba(107,74,42,.7)", lineHeight: 1.85, marginBottom: "2.5rem" }}>
-              Each villa, cottage, and suite has been thoughtfully positioned to preserve the natural
+              Each villa and private cabin has been thoughtfully positioned to preserve the natural
               landscape — offering unobstructed views of the forest canopy, the lake, and rolling hills.
             </p>
 

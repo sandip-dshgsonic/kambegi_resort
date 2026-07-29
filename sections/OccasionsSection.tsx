@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { Heart, Home, Camera, Briefcase, Users, ArrowUpRight } from "lucide-react";
+import { Heart, Home, Camera, Briefcase, Users, PartyPopper, ArrowUpRight } from "lucide-react";
 
 const occasions = [
   {
@@ -36,10 +36,16 @@ const occasions = [
     desc: "Book interconnected rooms or villas for family reunions and friend getaways, with shared common spaces to gather.",
     image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=900&q=85",
   },
+  {
+    icon: PartyPopper, accent: "#f59e0b", tag: "Up to 50 Guests",
+    name: "Private Event Space",
+    desc: "A private indoor venue for intimate celebrations — birthdays, family gatherings, and corporate retreats, fully yours for the occasion.",
+    image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1200&q=85",
+  },
 ];
 
-// Grid positions: [col-start/col-end] for 3-col grid — first card featured, spans 2 columns
-const gridCols = ["1 / 3", "3 / 4", "1 / 2", "2 / 3", "3 / 4"];
+// Grid positions: [col-start/col-end] for 3-col grid — first card featured, spans 2 columns; last card is a full-width finale
+const gridCols = ["1 / 3", "3 / 4", "1 / 2", "2 / 3", "3 / 4", "1 / 4"];
 
 export default function OccasionsSection() {
   const ref = useRef(null);
@@ -100,7 +106,7 @@ export default function OccasionsSection() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
-            gridTemplateRows: "320px 260px",
+            gridTemplateRows: "320px 260px 240px",
             gap: "0.7rem",
           }}
         >
@@ -157,7 +163,7 @@ export default function OccasionsSection() {
 
                 <h4 style={{
                   fontFamily: "var(--font-playfair), Georgia, serif",
-                  fontSize: i === 0 ? "1.75rem" : "1.2rem",
+                  fontSize: i === 0 ? "1.75rem" : i === 5 ? "1.5rem" : "1.2rem",
                   fontWeight: 400, color: "#faf7f2", lineHeight: 1.2,
                   marginBottom: "0.5rem",
                 }}>{o.name}</h4>

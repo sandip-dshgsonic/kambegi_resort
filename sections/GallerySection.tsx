@@ -7,8 +7,8 @@ import { X, ZoomIn, ChevronLeft, ChevronRight, Camera } from "lucide-react";
 
 const galleryImages = [
   { id: 1, src: "/Images/riverview.jpg", alt: "Panshet", category: "nature" },
-  { id: 2, src: "/Images/mountainview.jpg", alt: "Forest Villa", category: "accommodation" },
-  { id: 3, src: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=85", alt: "Glamping Tent", category: "accommodation" },
+  { id: 2, src: "/Images/mountainview.jpg", alt: "Heritage Villa", category: "accommodation" },
+  { id: 3, src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=85", alt: "Private Pool Cabin", category: "accommodation" },
   { id: 4, src: "/Images/lakeview2.jpg", alt: "Panshet Lake", category: "nature" },
   { id: 5, src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=85", alt: "Fine Dining", category: "dining" },
   { id: 6, src: "/Images/morningview.jpg", alt: "Infinity Pool", category: "amenities" },
