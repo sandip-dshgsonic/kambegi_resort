@@ -6,14 +6,14 @@ import Image from "next/image";
 import { Leaf, Mountain, Droplets, Sun } from "lucide-react";
 
 const pillars = [
-  { num: "01", icon: Leaf,     title: "Eco‑Conscious",   desc: "Zero-waste philosophy. Every element is sustainably sourced and locally crafted." },
-  { num: "02", icon: Mountain, title: "Wild & Untamed",   desc: "60+ acres of pristine forest, hidden trails, and cascading waterfalls await." },
-  { num: "03", icon: Droplets, title: "Water & Serenity", desc: "Set beside Panshet Lake with panoramic views of shimmering blue waters." },
-  { num: "04", icon: Sun,      title: "Soulful Luxury",   desc: "Ayurvedic wellness, farm‑to‑table dining, and bespoke curated experiences." },
+  { num: "01", icon: Leaf,     title: "Eco‑Conscious",   desc: "Zero-waste philosophy. Every element is sustainably sourced and locally crafted.", image: "/Images/farmview.jpg" },
+  { num: "02", icon: Mountain, title: "Wild & Untamed",   desc: "60+ acres of pristine forest, horse-riding trails, and gentle wildlife encounters at every turn.", image: "/Images/horse-riding.png" },
+  { num: "03", icon: Droplets, title: "Water & Serenity", desc: "Set beside Panshet Lake with panoramic views of shimmering blue waters.", image: "/Images/lakeview.jpg" },
+  { num: "04", icon: Sun,      title: "Soulful Luxury",   desc: "Ayurvedic wellness, farm‑to‑table dining, and bespoke curated experiences.", image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&q=85" },
 ];
 
 const counters = [
-  { num: "3",    text: "Unique Stays" },
+  { num: "5",    text: "Unique Stays" },
   { num: "12+",  text: "Curated Experiences" },
   { num: "2",    text: "Dining Venues" },
   { num: "100%", text: "Organic Sourced" },
@@ -64,7 +64,7 @@ export default function AboutSection() {
             lineHeight: 1.15, color: "#1a3a2a",
             marginTop: "1.25rem", marginBottom: "1.25rem",
           }}>
-            Where Wilderness Meets Wonder
+            Where Wild Meets Wonder
           </h2>
 
           <div style={{ width: 56, height: 1, background: "linear-gradient(to right, transparent, #c9a84c, transparent)", margin: "0 auto 1.75rem" }} />
@@ -208,6 +208,55 @@ export default function AboutSection() {
           </motion.div>
         </div>
 
+        {/* ── Founder's Story ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.15, duration: 0.8 }}
+          style={{
+            position: "relative", overflow: "hidden",
+            background: "#fff",
+            border: "1px solid rgba(201,168,76,.18)",
+            borderRadius: 8,
+            padding: "clamp(2rem,5vw,3.5rem)",
+            marginBottom: "5.5rem",
+            boxShadow: "0 4px 28px rgba(26,58,42,.06)",
+          }}
+        >
+          <div style={{ position: "absolute", top: 0, left: 0, bottom: 0, width: 4, background: "linear-gradient(180deg, #c9a84c, rgba(201,168,76,.15))" }} />
+
+          <div style={{ display: "grid", gap: "2.5rem", alignItems: "center" }} className="grid-cols-1 md:grid-cols-[auto_1fr]">
+            <div>
+              <span className="label-tag">Founded by Dad &amp; Me</span>
+              <p style={{
+                fontFamily: "var(--font-playfair), Georgia, serif", fontStyle: "italic",
+                fontSize: "clamp(1.15rem, 1.6vw, 1.35rem)", color: "#1a3a2a",
+                marginTop: "1rem", whiteSpace: "nowrap",
+              }}>Milind Kale &amp; Rashmi Kale</p>
+            </div>
+
+            <div>
+              <h3 style={{
+                fontFamily: "var(--font-playfair), Georgia, serif", fontWeight: 400,
+                fontSize: "clamp(1.4rem, 2.2vw, 1.9rem)", color: "#1a3a2a",
+                lineHeight: 1.25, marginBottom: "1rem",
+              }}>A Story Worth Sharing</h3>
+              <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.95rem", color: "rgba(107,74,42,.72)", lineHeight: 1.85, marginBottom: "1rem" }}>
+                Kambegi began as a shared dream between a father and family — Dad &amp; Me. Milind Kale
+                first fell for this stretch of land beside Panshet Lake years ago, drawn back again and
+                again by its quiet and its light. What started as weekend visits slowly became a question:
+                why keep this beauty to ourselves?
+              </p>
+              <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.95rem", color: "rgba(107,74,42,.72)", lineHeight: 1.85 }}>
+                Together with Rashmi Kale, that question became a decision — to build a retreat that felt
+                less like a business and more like an invitation into a place they already loved. Every
+                detail at Kambegi, from the wooden swing in the Heritage Villa to the trails that wind
+                through the forest, carries a little of that original feeling.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
         {/* ── Four Pillars ── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -220,45 +269,55 @@ export default function AboutSection() {
           <div style={{ flex: 1, height: 1, background: "linear-gradient(to left, transparent, rgba(201,168,76,.25))" }} />
         </motion.div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.25rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.25rem" }}>
           {pillars.map((p, i) => (
             <motion.div
               key={p.title}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.25 + i * 0.12, duration: 0.7 }}
-              whileHover={{ y: -6, boxShadow: "0 22px 55px rgba(26,58,42,.1)" }}
+              whileHover={{ y: -6, boxShadow: "0 22px 55px rgba(26,58,42,.22)" }}
+              className="group"
               style={{
-                background: "#fff",
-                border: "1px solid rgba(201,168,76,.15)",
-                borderRadius: 8, padding: "2rem 1.75rem",
                 position: "relative", overflow: "hidden",
-                boxShadow: "0 2px 16px rgba(26,58,42,.04)",
+                borderRadius: 8, minHeight: 340,
+                boxShadow: "0 8px 32px rgba(26,58,42,.14)",
                 transition: "box-shadow .4s ease",
                 cursor: "default",
               }}
             >
-              {/* Gold top accent */}
-              <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #c9a84c, rgba(201,168,76,.2))", borderRadius: "8px 8px 0 0" }} />
-              {/* Number watermark */}
+              <Image
+                src={p.image} alt={p.title} fill
+                className="object-cover object-bottom transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width:768px)50vw,25vw"
+              />
+
+              {/* Gradient overlay for legibility */}
               <div style={{
-                position: "absolute", top: -4, right: 14,
-                fontFamily: "var(--font-playfair), Georgia, serif",
-                fontSize: "5.5rem", fontWeight: 700,
-                color: "rgba(26,58,42,.05)", lineHeight: 1,
-                userSelect: "none", pointerEvents: "none",
-              }}>{p.num}</div>
+                position: "absolute", inset: 0,
+                background: "linear-gradient(180deg, rgba(8,13,9,.1) 0%, rgba(8,13,9,.32) 45%, rgba(8,13,9,.93) 100%)",
+              }} />
 
-              {/* Icon badge */}
-              <div style={{ width: 50, height: 50, borderRadius: 12, background: "rgba(26,58,42,.06)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1.25rem" }}>
-                <p.icon className="w-5 h-5" style={{ color: "#1a3a2a" }} />
+              {/* Gold top accent */}
+              <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #c9a84c, rgba(201,168,76,.2))", zIndex: 2 }} />
+
+              <div style={{ position: "relative", zIndex: 2, height: "100%", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "1.85rem 1.6rem" }}>
+                {/* Icon badge */}
+                <div style={{
+                  width: 46, height: 46, borderRadius: 12,
+                  background: "rgba(8,13,9,.5)", backdropFilter: "blur(10px)",
+                  border: "1px solid rgba(201,168,76,.35)",
+                  display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1.15rem",
+                }}>
+                  <p.icon className="w-5 h-5" style={{ color: "#c9a84c" }} />
+                </div>
+
+                <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.58rem", letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "#c9a84c", marginBottom: "0.5rem" }}>{p.num}</p>
+
+                <h4 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.25rem", fontWeight: 400, color: "#faf7f2", marginBottom: "0.7rem" }}>{p.title}</h4>
+
+                <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.85rem", color: "rgba(250,247,242,.72)", lineHeight: 1.75 }}>{p.desc}</p>
               </div>
-
-              <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.58rem", letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "#c9a84c", marginBottom: "0.55rem" }}>{p.num}</p>
-
-              <h4 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 400, color: "#1a3a2a", marginBottom: "0.8rem" }}>{p.title}</h4>
-
-              <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.855rem", color: "rgba(107,74,42,.65)", lineHeight: 1.8 }}>{p.desc}</p>
             </motion.div>
           ))}
         </div>

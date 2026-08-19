@@ -3,6 +3,15 @@
 import { useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import { PawPrint, Footprints, MoonStar, Music3, Flower2 } from "lucide-react";
+
+const experiences = [
+  { icon: PawPrint,  title: "Animal Feeding" },
+  { icon: Footprints, title: "Horse-Riding Trails" },
+  { icon: MoonStar,  title: "Dinner Under the Stars" },
+  { icon: Music3,    title: "Live Music & Concerts" },
+  { icon: Flower2,   title: "Dance & Yoga Workshops" },
+];
 
 const masterplanItems = [
   {
@@ -192,6 +201,55 @@ export default function MasterplanSection() {
             );
           })}
         </div>
+
+        {/* ── Signature Experiences ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7 }}
+          style={{ marginTop: "5rem" }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2.5rem" }}>
+            <div style={{ flex: 1, height: 1, background: "linear-gradient(to right, transparent, rgba(201,168,76,.25))" }} />
+            <span style={{ fontFamily: "var(--font-inter)", fontSize: "0.62rem", letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "rgba(107,74,42,.45)", whiteSpace: "nowrap" }}>Signature Experiences</span>
+            <div style={{ flex: 1, height: 1, background: "linear-gradient(to left, transparent, rgba(201,168,76,.25))" }} />
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(170px, 1fr))", gap: "1rem" }}>
+            {experiences.map((e, i) => (
+              <motion.div
+                key={e.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.6 }}
+                whileHover={{ y: -5, boxShadow: "0 18px 40px rgba(26,58,42,.12)" }}
+                style={{
+                  background: "#fff",
+                  border: "1px solid rgba(201,168,76,.15)",
+                  borderRadius: 6,
+                  padding: "1.6rem 1.25rem",
+                  textAlign: "center",
+                  boxShadow: "0 2px 16px rgba(26,58,42,.04)",
+                  transition: "box-shadow .3s ease",
+                }}
+              >
+                <div style={{
+                  width: 46, height: 46, borderRadius: "50%",
+                  background: "rgba(26,58,42,.06)",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  margin: "0 auto 1rem",
+                }}>
+                  <e.icon className="w-5 h-5" style={{ color: "#1a3a2a" }} />
+                </div>
+                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 400, color: "#1a3a2a", lineHeight: 1.3 }}>
+                  {e.title}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

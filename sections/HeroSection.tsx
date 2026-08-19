@@ -5,9 +5,9 @@ import Image from "next/image";
 import { ArrowRight, MapPin, Star, Leaf, Wind } from "lucide-react";
 
 const stats = [
-  { value: "3",    label: "Unique Stays" },
+  { value: "5",    label: "Unique Stays" },
   { value: "60+",  label: "Acres of Nature" },
-  { value: "2 hrs",label: "From Pune" },
+  { value: "1.5 hrs",label: "From Pune" },
   { value: "5 ★",  label: "Rating" },
 ];
 

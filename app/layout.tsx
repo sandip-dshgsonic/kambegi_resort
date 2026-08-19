@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s | Kambegi Resort",
   },
   description:
-    "Experience an ultra-premium nature retreat at Kambegi Resort near Panshet, Pune. Luxury villas, treehouse cottages, farm-to-table dining, Ayurvedic spa, and water sports amidst the Western Ghats.",
+    "Experience an ultra-premium nature retreat at Kambegi Resort near Panshet, Pune. Luxury villas, private pool cabins, forest cottages, glamping tents, farm-to-table dining, Ayurvedic spa, and water sports amidst the Western Ghats.",
   keywords: [
     "luxury resort near Pune",
     "nature resort Panshet",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "Western Ghats resort",
     "Panshet resort",
     "glamping Pune",
-    "treehouse resort Pune",
+    "private pool villa Pune",
     "best resort near pune",
     "weekend getaway pune",
   ],

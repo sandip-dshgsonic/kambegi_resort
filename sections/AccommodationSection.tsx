@@ -39,6 +39,27 @@ const rooms = [
       "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&q=80",
     ],
   },
+  {
+    id: 4, name: "Forest Cottage", type: "Cottage", price: "On Request",
+    desc: "A cozy two-bedroom cottage tucked into the forest canopy — a quieter, more intimate alternative to our villas, perfect for smaller families or friends who want a simple stay close to nature.",
+    guests: 4, bedrooms: 2, size: "Forest Retreat", rating: 5,
+    accent: "#4ade80",
+    badges: ["Forest Views", "Cozy Fireplace", "Private Deck"],
+    images: [
+      "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=900&q=80",
+    ],
+  },
+  {
+    id: 5, name: "Forest Glamping Tents", type: "Glamping", price: "On Request",
+    desc: "Plush canvas tents with a private fire pit and stargazing deck — adventure meets comfort under the open sky, just steps from the main resort.",
+    guests: 2, bedrooms: 1, size: "Canvas Suite", rating: 5,
+    accent: "#f59e0b",
+    badges: ["Private Fire Pit", "Stargazing Deck", "Canvas Luxury"],
+    images: [
+      "https://images.unsplash.com/photo-1476041800959-2f6bb412c8ce?w=900&q=80",
+      "https://images.unsplash.com/photo-1445308394109-4ec2920981b1?w=900&q=80",
+    ],
+  },
 ];
 
 function RoomCard({ room, index }: { room: typeof rooms[0]; index: number }) {
@@ -196,7 +217,21 @@ export default function AccommodationSection() {
       {/* Ambient blob */}
       <div style={{ position: "absolute", top: "30%", right: 0, width: 500, height: 500, borderRadius: "50%", background: "rgba(201,168,76,.04)", filter: "blur(100px)", pointerEvents: "none" }} />
 
-      <div className="container-luxury">
+      {/* Subtle logo watermark */}
+      <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", pointerEvents: "none", overflow: "hidden", zIndex: 0 }}>
+        <span style={{
+          fontFamily: "var(--font-playfair), Georgia, serif",
+          fontSize: "clamp(8rem,18vw,20rem)",
+          fontWeight: 700,
+          color: "rgba(26,58,42,.03)",
+          whiteSpace: "nowrap",
+          userSelect: "none",
+        }}>
+          KAMBEGI
+        </span>
+      </div>
+
+      <div className="container-luxury" style={{ position: "relative", zIndex: 10 }}>
 
         {/* Header */}
         <motion.div
@@ -209,14 +244,14 @@ export default function AccommodationSection() {
             className="mt-5 mb-5"
             style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontWeight: 400, fontSize: "clamp(2rem,4.5vw,3.75rem)", lineHeight: 1.15, color: "#1a3a2a" }}
           >
-            Choose Your Sanctuary
+            Discover Your Retreat
           </h2>
           <div className="divider-gold" />
           <p
             className="mt-6 mx-auto"
-            style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "rgba(107,74,42,.68)", lineHeight: 1.8, maxWidth: 560 }}
+            style={{ fontFamily: "var(--font-inter)", fontSize: "1rem", color: "rgba(107,74,42,.68)", lineHeight: 1.8, maxWidth: 580 }}
           >
-            From the wood-panelled warmth of our Heritage Villa to the sleek, lake-facing Horizon Villa and our private couple&apos;s pool cabins — each stay is a distinct encounter with luxury and nature.
+            From the wood-panelled warmth of our Heritage Villa to the sleek, lake-facing Horizon Villa, our private couple&apos;s pool cabins, forest cottage, and glamping tents — five distinct stays, just 1.5 hours from Pune.
           </p>
         </motion.div>
 

@@ -14,6 +14,8 @@ const roomOptions = [
   { value: "Heritage Villa",       label: "Heritage Villa — 5 Bedroom" },
   { value: "Horizon Villa",        label: "Horizon Villa — 3 Bedroom" },
   { value: "Private Pool Cabin",   label: "Private Pool Cabin — Couple's Retreat" },
+  { value: "Forest Cottage",       label: "Forest Cottage" },
+  { value: "Forest Glamping Tents",label: "Forest Glamping Tents" },
 ];
 
 const policies = [
