@@ -20,7 +20,7 @@ export default function LocationSection() {
     <section
       id="location"
       ref={ref}
-      style={{ backgroundColor: "#faf7f2", padding: "7rem 0 8rem", position: "relative", overflow: "hidden" }}
+      style={{ backgroundColor: "#faf7f2", paddingTop: "clamp(3.5rem, 10vw, 7rem)", paddingBottom: "clamp(4rem, 11vw, 8rem)", position: "relative", overflow: "hidden" }}
     >
       {/* Background ambience */}
       <div style={{ position: "absolute", top: "10%", right: "-5%", width: 520, height: 520, borderRadius: "50%", background: "rgba(26,58,42,.04)", filter: "blur(120px)", pointerEvents: "none" }} />

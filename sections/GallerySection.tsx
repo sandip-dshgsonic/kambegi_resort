@@ -64,7 +64,7 @@ export default function GallerySection() {
     <section
       id="gallery"
       ref={ref}
-      style={{ backgroundColor: "#1a3a2a", padding: "7rem 0 8rem", position: "relative", overflow: "hidden" }}
+      style={{ backgroundColor: "#1a3a2a", paddingTop: "clamp(3.5rem, 10vw, 7rem)", paddingBottom: "clamp(4rem, 11vw, 8rem)", position: "relative", overflow: "hidden" }}
     >
       {/* Ambient glows */}
       <div style={{ position: "absolute", top: 0, right: 0, width: 500, height: 500, borderRadius: "50%", background: "rgba(201,168,76,.06)", filter: "blur(120px)", pointerEvents: "none" }} />

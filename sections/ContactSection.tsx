@@ -129,7 +129,10 @@ export default function ContactSection() {
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(26,58,42,.92) 0%, rgba(26,58,42,.6) 50%, rgba(26,58,42,.3) 100%)" }} />
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, transparent 60%, #1a3a2a 100%)" }} />
 
-          <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "clamp(2rem,5vw,4rem)" }}>
+          <div
+            className="relative md:absolute md:inset-0"
+            style={{ zIndex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "1.75rem", padding: "clamp(2rem,5vw,4rem)" }}
+          >
             {/* Top label */}
             <motion.div initial={{ opacity: 0, y: -20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
               <span className="label-tag" style={{ color: "#c9a84c", borderColor: "rgba(201,168,76,.35)" }}>Reserve Your Stay</span>
@@ -158,15 +161,15 @@ export default function ContactSection() {
               </div>
 
               {/* Social proof */}
-              <div style={{ display: "flex", alignItems: "center", gap: "0.85rem", marginTop: "2rem", padding: "0.85rem 1.1rem", background: "rgba(250,247,242,.07)", backdropFilter: "blur(8px)", border: "1px solid rgba(250,247,242,.1)", borderRadius: 8 }}>
-                <div style={{ display: "flex" }}>
+              <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: "0.85rem", marginTop: "2rem", padding: "0.85rem 1.1rem", background: "rgba(250,247,242,.07)", backdropFilter: "blur(8px)", border: "1px solid rgba(250,247,242,.1)", borderRadius: 8 }}>
+                <div style={{ display: "flex", flexShrink: 0 }}>
                   {["A","R","S","M","P"].map((l, i) => (
-                    <div key={l} style={{ width: 30, height: 30, borderRadius: "50%", background: `rgba(201,168,76,${0.15 + i * 0.05})`, border: "2px solid rgba(26,58,42,.8)", display: "flex", alignItems: "center", justifyContent: "center", marginLeft: i ? -8 : 0, fontFamily: "var(--font-inter)", fontSize: "0.68rem", fontWeight: 700, color: "#faf7f2" }}>
+                    <div key={l} style={{ width: 30, height: 30, minWidth: 30, flexShrink: 0, borderRadius: "50%", background: `rgba(201,168,76,${0.15 + i * 0.05})`, border: "2px solid rgba(26,58,42,.8)", display: "flex", alignItems: "center", justifyContent: "center", marginLeft: i ? -8 : 0, fontFamily: "var(--font-inter)", fontSize: "0.68rem", fontWeight: 700, color: "#faf7f2" }}>
                       {l}
                     </div>
                   ))}
                 </div>
-                <div>
+                <div style={{ minWidth: 0 }}>
                   <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.8rem", color: "#faf7f2", fontWeight: 600 }}>200+ happy guests</p>
                   <p style={{ fontFamily: "var(--font-inter)", fontSize: "0.7rem", color: "rgba(250,247,242,.5)", marginTop: 1 }}>loved their stay this month</p>
                 </div>

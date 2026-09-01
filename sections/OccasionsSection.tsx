@@ -55,7 +55,7 @@ export default function OccasionsSection() {
     <section
       id="occasions"
       ref={ref}
-      style={{ backgroundColor: "#1a3a2a", padding: "7rem 0 8rem", position: "relative", overflow: "hidden" }}
+      style={{ backgroundColor: "#1a3a2a", paddingTop: "clamp(3.5rem, 10vw, 7rem)", paddingBottom: "clamp(4rem, 11vw, 8rem)", position: "relative", overflow: "hidden" }}
     >
       {/* Background */}
       <div style={{ position: "absolute", top: "8%", right: "-8%", width: 480, height: 480, borderRadius: "50%", background: "rgba(201,168,76,.08)", filter: "blur(110px)", pointerEvents: "none" }} />

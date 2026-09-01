@@ -212,7 +212,7 @@ function RoomCard({ room, index }: { room: typeof rooms[0]; index: number }) {
 
 export default function AccommodationSection() {
   return (
-    <section id="accommodation" style={{ backgroundColor: "#f5f0e8", padding: "6rem 0 7rem", position: "relative", overflow: "hidden" }}>
+    <section id="accommodation" style={{ backgroundColor: "#f5f0e8", paddingTop: "clamp(3rem, 9vw, 6rem)", paddingBottom: "clamp(3.5rem, 10vw, 7rem)", position: "relative", overflow: "hidden" }}>
 
       {/* Ambient blob */}
       <div style={{ position: "absolute", top: "30%", right: 0, width: 500, height: 500, borderRadius: "50%", background: "rgba(201,168,76,.04)", filter: "blur(100px)", pointerEvents: "none" }} />

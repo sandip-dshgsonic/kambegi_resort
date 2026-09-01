@@ -86,7 +86,7 @@ export default function AmenitiesSection() {
     <section
       id="amenities"
       ref={ref}
-      style={{ backgroundColor: "#faf7f2", padding: "7rem 0 8rem", position: "relative", overflow: "hidden" }}
+      style={{ backgroundColor: "#faf7f2", paddingTop: "clamp(3.5rem, 10vw, 7rem)", paddingBottom: "clamp(4rem, 11vw, 8rem)", position: "relative", overflow: "hidden" }}
     >
       {/* Background */}
       <div style={{ position: "absolute", top: "5%", left: "-5%", width: 500, height: 500, borderRadius: "50%", background: "rgba(26,58,42,.04)", filter: "blur(100px)", pointerEvents: "none" }} />
